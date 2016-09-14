@@ -10,7 +10,7 @@
       <!-- bind a controller to a corresponding DOM element -->
       <div class="container-fluid">
         <h1>{{title}}</h1>
-          <button ng-click="getGuides()">Get guides</button>
+          <button ng-click="getMyGuides()">Get guides</button>
           <div ng-repeat="book in books">
           <h4>Title: {{book.title}}</h4>
           <p>Guide Type: {{book.type}}</p>
@@ -33,6 +33,6 @@
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/controllers/bookCtrl.js"></script>
-    <!-- <script src="app/factories/GuideFactory.js"></script> -->
+    <script src="app/factories/guideFactory.js"></script>
   </body>
 </html>
