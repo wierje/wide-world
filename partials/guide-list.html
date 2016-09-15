@@ -1,0 +1,9 @@
+      <div class="container-fluid">
+        <h1>{{title}}</h1>
+          <button ng-click="getMyGuides()">Get guides</button>
+      </div>
+          <div ng-repeat="book in books">
+          <h4>Title: {{book.title}}</h4>
+          <p>Guide Type: {{book.type}}</p>
+          <p>Price: ${{book.price}}</p>
+      </div>
