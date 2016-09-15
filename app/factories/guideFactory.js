@@ -1,20 +1,19 @@
-// 'use strict';
+"use strict";
 
-// app.factory('GuideFactory', ($q, $http) => {
-//   let getGuides = function() {
-//     let books = [];
-//     return $q((resolve, reject) => {
-//       $http.get('../../data/guides.json')
-//       .success((bookObject) => {
-//         resolve (bookObject);
-//         console.log('bookObject');
-//       })
-//       .error(error);
-//       reject(error);
-//     });
-//   };
-// return{getGuides};
-// console.log(bookObject);
-// });
+app.factory("guideFactory", ($q, $http) => {
 
-// // /data/guides.json
+  let getGuides = function() {
+    console.log("get the books!!!");
+    return $q((resolve, reject) => {
+      $http.get('../../data/guides.json')
+      .success((bookObject) => {
+        resolve (bookObject.guides);
+      })
+      .error((error) => {
+        reject(error);
+      });
+   });
+  };
+
+  return{getGuides}
+});

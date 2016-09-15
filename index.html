@@ -6,17 +6,8 @@
   </head>
   <!-- bind the Angular application to our DOM -->
   <body ng-app='Guides'>
-    <div ng-controller='bookCtrl'>
       <!-- bind a controller to a corresponding DOM element -->
-      <div class="container-fluid">
-        <h1>{{title}}</h1>
-          <button ng-click="getGuides()">Get guides</button>
-          <div ng-repeat="book in books">
-          <h4>Title: {{book.title}}</h4>
-          <p>Guide Type: {{book.type}}</p>
-          <p>Price: ${{book.price}}</p>
-          </div>
-      </div>
+
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 main-container">
           <div class="col-xs-12" ng-view>
@@ -24,7 +15,6 @@
           </div>
         </div>
       </div>
-    </div>
     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
     <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js">
@@ -33,6 +23,6 @@
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/controllers/bookCtrl.js"></script>
-    <!-- <script src="app/factories/GuideFactory.js"></script> -->
+    <script src="app/factories/guideFactory.js"></script>
   </body>
 </html>
